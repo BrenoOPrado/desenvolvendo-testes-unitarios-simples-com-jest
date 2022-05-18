@@ -99,19 +99,7 @@ const createMenu = (obj) => {
     consumption: ['coxinha', 'cerveja'],
     order: (newIten) => restaurant.consumption.push(newIten),
     pay: () => {
-      const result = restaurant.consumption.forEach((pedido) => {
-        let total = 0;
-        total += Object.keys(restaurant.fetchMenu()).forEach((categoria) => {
-          const valor = Object.keys(restaurant.fetchMenu().categoria).forEach((item) => {
-            if (item === pedido) {
-              return restaurant.fetchMenu().categoria.item;
-            }
-            return valor;
-          });
-        });
-        return total;
-      });
-      return result;
+      //usar filter
     },
   };
   return restaurant;
